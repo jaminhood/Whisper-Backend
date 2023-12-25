@@ -16,7 +16,7 @@ app.use(express.json())
 
 app.use("/", express.static(path.join(__dirname, "public")))
 app.use("/", require("./routes/rootRoutes"))
-app.use("/messages", require("./routes/messageRoutes"))
+app.use("/api/v1", require("./routes/v1"))
 app.use("*", require("./routes/notFoundRoute"))
 
 app.use(errorHandler)
